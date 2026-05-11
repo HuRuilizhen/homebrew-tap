@@ -64,7 +64,7 @@ class Blograg < Formula
     sha256 "45a282cde31d808236fd7ea9d919b128653c8b38b393d1c4ab335c62924d9aba"
   end
 
-  resource "pydantic_core" do
+  resource "pydantic-core" do
     url "https://files.pythonhosted.org/packages/c1/81/4fa520eaffa8bd7d1525e644cd6d39e7d60b1592bc5b516693c7340b50f1/pydantic_core-2.46.4-cp313-cp313-macosx_11_0_arm64.whl"
     sha256 "c94f0688e7b8d0a67abf40e57a7eaaecd17cc9586706a31b76c031f63df052b4"
   end
@@ -289,7 +289,7 @@ class Blograg < Formula
     sha256 "e9d2cae6d195a7e1e05164c5ebf26142a7044e4dc4267274f4809204f92827e4"
   end
 
-  resource "huggingface_hub" do
+  resource "huggingface-hub" do
     url "https://files.pythonhosted.org/packages/89/a5/33b49ba7bea7c41bb37f74ec0f8beea0831e052330196633fe2c77516ea6/huggingface_hub-1.14.0-py3-none-any.whl"
     sha256 "efe075535c62e130b30e836b138e13785f6f043d1f0539e0a39aa411a99e90b8"
   end
@@ -349,7 +349,7 @@ class Blograg < Formula
     sha256 "7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686"
   end
 
-  resource "smart_open" do
+  resource "smart-open" do
     url "https://files.pythonhosted.org/packages/14/78/0f68b93564b8c6b6987a0696c582ba2591a381ab2f733a501909e949f241/smart_open-7.6.1-py3-none-any.whl"
     sha256 "b4de6aebef023aca91cc9fb372052e1343ba3f152de215bd22391a663e3ddd21"
   end
@@ -399,7 +399,7 @@ class Blograg < Formula
     sha256 "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
   end
 
-  resource "typing_extensions" do
+  resource "typing-extensions" do
     url "https://files.pythonhosted.org/packages/18/67/36e9267722cc04a6b9f15c7f3441c2363321a3ea07da7ae0c0707beb2a9c/typing_extensions-4.15.0-py3-none-any.whl"
     sha256 "f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"
   end
