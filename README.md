@@ -24,7 +24,10 @@ brew install HuRuilizhen/tap/<formula>
 Validate a formula from this repository with:
 
 ```bash
-brew install --formula ./Formula/<formula>.rb
-brew test <formula>
-brew audit --strict --online ./Formula/<formula>.rb
+brew tap HuRuilizhen/tap /path/to/homebrew-tap
+brew style Formula/<formula>.rb
+brew readall --aliases --syntax HuRuilizhen/tap
+brew install HuRuilizhen/tap/<formula>
+brew test HuRuilizhen/tap/<formula>
+brew audit --strict --online HuRuilizhen/tap/<formula>
 ```

@@ -435,10 +435,47 @@ class Blograg < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    virtualenv_create(libexec, "python3.13")
+
+    resources.each do |resource|
+      pip_install_resource(resource)
+    end
+
+    pip_install_target(buildpath)
+    bin.install_symlink libexec/"bin/blograg"
   end
 
   test do
     assert_match "Usage", shell_output("#{bin}/blograg --help")
+  end
+
+  private
+
+  def pip_install_args
+    [
+      "-m", "pip",
+      "--python=#{libexec}/bin/python",
+      "install",
+      "--verbose",
+      "--no-deps",
+      "--ignore-installed",
+      "--no-compile"
+    ]
+  end
+
+  def pip_install_resource(resource)
+    resource.stage do
+      target = if resource.url&.end_with?(".whl")
+        Pathname.pwd/resource.downloader.basename
+      else
+        Pathname.pwd
+      end
+
+      system Formula["python@3.13"].opt_bin/"python3.13", *pip_install_args, target
+    end
+  end
+
+  def pip_install_target(target)
+    system Formula["python@3.13"].opt_bin/"python3.13", *pip_install_args, target
   end
 end
