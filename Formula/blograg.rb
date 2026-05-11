@@ -7,6 +7,7 @@ class Blograg < Formula
   sha256 "1cc939ea775b340dd0c86b32e3fa3a6cfb6678fb2db4ad10f4bbc1ca3fe4df26"
   license "MIT"
 
+  depends_on "rust" => :build
   depends_on "python@3.13"
 
   resource "labelrag" do
@@ -275,8 +276,8 @@ class Blograg < Formula
   end
 
   resource "rpds-py" do
-    url "https://files.pythonhosted.org/packages/fd/32/55fb50ae104061dbc564ef15cc43c013dc4a9f4527a1f4d99baddf56fe5f/rpds_py-0.30.0-cp313-cp313-macosx_11_0_arm64.whl"
-    sha256 "e7536cd91353c5273434b4e003cbda89034d67e7710eab8761fd918ec6c69cf8"
+    url "https://files.pythonhosted.org/packages/20/af/3f2f423103f1113b36230496629986e0ef7e199d2aa8392452b484b38ced/rpds_py-0.30.0.tar.gz"
+    sha256 "dd8ff7cf90014af0c0f787eea34794ebf6415242ee1d6fa91eaba725cc441e84"
   end
 
   resource "sentence-transformers" do
